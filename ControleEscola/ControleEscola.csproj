@@ -266,6 +266,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Professor\Index.cshtml" />
     <Content Include="Views\Professor\View1.cshtml" />
+    <Content Include="Views\Professor\BuscarProfessor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

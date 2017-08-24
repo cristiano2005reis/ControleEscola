@@ -17,26 +17,23 @@ namespace ControleEscola.Controllers
 
             prof.Nome = "Raphael Macedo";
             prof.IdProfessor = 1;
-
-            //try
-            //{
-            //    using (ProfessorService service = new ProfessorService())
-            //    {
-            //        service.BuscaProfessor(12);
-            //    }
-            //}
-
-            //catch(Exception e)
-            //{
-            //    return e.Message;
-            //}
-
+                      
             return View(prof);
         }
 
-        public HttpResponse Index(long id)
+        public ActionResult BuscarProfessor()
         {
-            return null;
+            ProfessorService service = new ProfessorService();
+            Professor model = new Professor();
+            model = service.BuscaProfessor();
+
+            return View(model);
         }
+
+        public ActionResult InserirProfessor()
+        {
+            return View();
+        }
+
     }
 }
